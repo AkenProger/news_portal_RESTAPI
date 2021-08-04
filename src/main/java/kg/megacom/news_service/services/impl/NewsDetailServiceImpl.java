@@ -62,5 +62,10 @@ public class NewsDetailServiceImpl implements NewsDetailService {
         return newsDetailMapper.toDtos(newsDetailRepository.findByLanguage());
     }
 
+    @Override
+    public List<NewsDetailDto> findByLanguageName(String name) {
+        return newsDetailMapper.toDtos(newsDetailRepository.findByLanguageName(name));
+    }
+
 
 }

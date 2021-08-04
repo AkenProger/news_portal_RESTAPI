@@ -10,4 +10,6 @@ public interface NewsDetailService extends BaseCrudService<NewsDetailDto, Long>{
     List<NewsDetailDto> findByLanguageId(Long id);
 
     List<NewsDetailDto> findDefaultLanguage();
+
+    List<NewsDetailDto> findByLanguageName(String name);
 }

@@ -18,4 +18,7 @@ public interface NewsDetailRepository extends JpaRepository<NewsDetails, Long> {
     @Query(value = "Select * from public.news_details n,public.language l where n.language_id = l.id and  l.id =3", nativeQuery = true)
     List<NewsDetails> findByLanguage();
 
+    @Query(value = "Select * from public.news_details n,public.language l where n.language_id = l.id and  l.lang_name = ?1", nativeQuery = true)
+    List<NewsDetails> findByLanguageName(String name);
+
 }
